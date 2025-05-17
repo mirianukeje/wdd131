@@ -7,12 +7,12 @@
 :root {
     --primary-color: black;
     --text-color: white;
-    --heading-color: rgb(85, 126, 248);
+    --heading-color: darkblue;
     --border-color: #dddddd;
     --background-color: #ddd;
     --box-shadow: 0 0 30px gray;
     --main-max-width: 960px;
-    --highlight-color: rgb(85, 126, 248);
+    --highlight-color: #25e54f;
     --primary-font: 'Roboto', sans-serif;
 }
 
@@ -204,7 +204,7 @@ nav a:hover {
 }
 
 footer {
-    background: var(--primary-color);
+    background: var(--heading-color);
     color: #e5e5e5;
     padding: 0.5rem;
     text-align: center;
@@ -218,6 +218,6 @@ p {
 } 
 
 #lastModified {
-    color: rgb(85, 126, 248);
+    color: var(--highlight-color);
     font-weight: bold;
 }
