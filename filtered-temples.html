@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Filtered Temples</title>
+  <meta name="description" content="A page that displays filtered temples."/>
+  <meta name="author" content="Mirian Ukeje"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles/filtered-temple.css"/>
+  <link rel="stylesheet" href="styles/filtered-temple-large.css"/>
+  <script src="scripts/filtered-temple.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1 class="site-title">Filtered Temples</h1>
+    <button id="menu" aria-label="Menu"></button>
+    <nav>
+      <ul class="navigation">
+        <li><a href="#" id="home">Home</a></li>
+        <li><a href="#" id="old">Old</a></li>
+        <li><a href="#" id="new">New</a></li>
+        <li><a href="#" id="large">Large</a></li>
+        <li><a href="#" id="small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 id="category-title">All Temples</h2>
+    <div class="figure-grid"></div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Mirian Ukeje - Lagos, Nigeria.</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
