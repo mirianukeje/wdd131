@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>William's Pet Home</title>
+  <link rel="stylesheet" href="styles/siteplan.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+    <div class="logo">🐾</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div id="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About us</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+    </div>
+  </nav>
+  </header>
+
+   <main>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>At William's Pet Home, we understand that your pets are more than just animals; they are family.</p>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Boarding</li>
+        <li>Adopting</li>
+        <li>Grooming</li>
+        <li>Vet Visits</li>
+        <li>Training</li>
+      </ul>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <img src="https://via.placeholder.com/150" alt="Pet 1">
+      <img src="https://via.placeholder.com/150" alt="Pet 2">
+      <img src="https://via.placeholder.com/150" alt="Pet 3">
+      <img src="https://via.placeholder.com/150" alt="Pet 4">
+      <img src="https://via.placeholder.com/150" alt="Pet 5">
+      <img src="https://via.placeholder.com/150" alt="Pet 6">
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <input type="text" id="name" name="name" placeholder="Your Name" required />
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-response"></p>
+  
+   <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0257221959266!2d-122.40109478468186!3d37.78865997975759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c60f617a1%3A0xe7b43e0bd38c36cd!2sHappy%20Paws%20Pet%20Home!5e0!3m2!1sen!2sus!4v1600000000000"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mirian Ukeje - William's Pet Home</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

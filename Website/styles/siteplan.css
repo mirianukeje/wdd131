@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  background: #f4fbff;
+  color: black;
+  }
+
+header {
+  background: #d3f59f;
+  text-align: center;
+  padding: 1rem;
+}
+
+nav {
+  background: #d3f59f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+nav .logo {
+  font-size: 3rem;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+#nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+#nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Main */
+main {
+  padding: 1rem 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+/* Gallery */
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+/* Form */
+form {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  background-color: #d3f59f;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: black;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+}
+
+/* Responsive nav */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #nav-links.show {
+    display: flex;
+  }
+}
