@@ -1,22 +1,33 @@
-/* General Reset */
+/* General Reset
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+  --font-body: 'Montserrat', sans-serif;
+  --font-heading: 'Roboto Slab', serif;
+  --primary-color: #d3f59f;
+  --secondary-color: #fdfdfd;
+  --text-color: black;
+}
+
+
 body {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'serif';
     line-height: 1.6; 
     background-color:  #fdfdfd;
     color: black;
     padding: 1rem;
    }
 
-/* Header */
+
 header {
     background-color: #d3f59f;
+    font-weight: 500;
     color: #000000;
+    font-family: 'Roboto Slab';
     padding: 10px;
     text-align: center;
     margin-bottom: 10px;
@@ -24,11 +35,13 @@ header {
 
 h1 {
     font-size: 2em;
-}
+    font-family: 'Roboto Slab';
+  }
 
 h2, h3, h4 {
     font-size: medium;
     color: black; 
+    font-family: 'Roboto Slab';
 }
 
 section {
@@ -48,4 +61,64 @@ footer {
     text-align: center;
     font-size: 0.9em;
     color: black;
+} */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-body: 'Montserrat', sans-serif;
+    --font-heading: 'Roboto Slab', serif;
+    --primary-color: #d3f59f;
+    --secondary-color: #fdfdfd;
+    --text-color: black;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 1rem;
+}
+
+/* Headings use heading font */
+h1, h2, h3, h4, h5, h6, header {
+    font-family: var(--font-heading);
+    color: var(--text-color);
+    font-size: larger;
+}
+
+/* Header styling */
+header {
+    background-color: var(--primary-color);
+    font-size: x-large;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Section */
+section {
+    background-color: var(--secondary-color);
+    padding: 10px;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border: 1px solid var(--text-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--text-color);
 }
