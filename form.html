@@ -1,63 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Review Form</title>
-  <meta name="description" content="Product Review Form" />
-  <meta name="author" content="Mirian Ukeje" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles/form.css" />
+  <meta name="description" content="Product Review Form">
+  <meta name="author" content="Mirian Ukeje">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
   <script src="scripts/form.js" defer></script>
 </head>
-
 <body>
   <h1>Product Review</h1>
-
   <form method="get" action="review.html">
-    
+
+    <!-- Product Name (select, required, first option instructional, rest dynamic) -->
     <fieldset>
-     <legend>Product Name</legend>
-     <select name="product" id="product" required>
-     </select>
+      <label for="product" class="bold-label">Product Name</label>
+      <select id="product" name="product" required>
+        <option value="" disabled selected>Select a Product ...</option>
+        <!-- Dynamically filled by JS -->
+      </select>
     </fieldset>
 
-
+    <!-- Overall Rating (radio, same name, required, 1-5, star symbols) -->
     <fieldset>
-      <legend>Overall Rating</legend>
-      <label><input type="radio" name="rating" value="1" required> ★</label>
-      <label><input type="radio" name="rating" value="2"> ★★</label>
-      <label><input type="radio" name="rating" value="3"> ★★★</label>
-      <label><input type="radio" name="rating" value="4"> ★★★★</label>
-      <label><input type="radio" name="rating" value="5"> ★★★★★</label>
+      <legend class="bold-label">Overall Rating</legend>
+      <label for="rating1"><input type="radio" id="rating1" name="rating" value="1" required> ★</label>
+      <label for="rating2"><input type="radio" id="rating2" name="rating" value="2"> ★★</label>
+      <label for="rating3"><input type="radio" id="rating3" name="rating" value="3"> ★★★</label>
+      <label for="rating4"><input type="radio" id="rating4" name="rating" value="4"> ★★★★</label>
+      <label for="rating5"><input type="radio" id="rating5" name="rating" value="5"> ★★★★★</label>
+
     </fieldset>
 
+    <!-- Date of Installation (date, required) -->
     <fieldset>
-      <legend>Date of Installation</legend>
-      <input type="date" id="install-date" name="install-date" required />
+      <label for="install-date" class="bold-label">Date of Installation</label>
+      <input type="date" id="install-date" name="install-date" required>
     </fieldset>
 
+    <!-- Useful Features (checkbox, check all that apply, id, name, value, labels) -->
     <fieldset>
       <legend>Which features did you find useful in the product?<br><em>(Check all that apply)</em></legend>
-      <label><input type="checkbox" name="features" value="design"> Design</label>
-      <label><input type="checkbox" name="features" value="durability"> Durability</label>
-      <label><input type="checkbox" name="features" value="ease-of-use"> Ease of Use</label>
-      <label><input type="checkbox" name="features" value="performance"> Performance</label>
-      </fieldset>
+      <label for="feature-design"><input type="checkbox" id="feature-design" name="features" value="design"> Design</label>
+      <label for="feature-durability"><input type="checkbox" id="feature-durability" name="features" value="durability"> Durability</label>
+      <label for="feature-easeofuse"><input type="checkbox" id="feature-easeofuse" name="features" value="ease-of-use"> Ease of Use</label>
+      <label for="feature-performance"><input type="checkbox" id="feature-performance" name="features" value="performance"> Performance</label>
+    </fieldset>
 
+    <!-- Written Review (textarea, id, name, optional, label) -->
     <fieldset>
-      <legend for="review">Written Review <em>(Optional)</em></legend>
+      <label for="review" class="bold-label">Written Review <em>(Optional)</em></label>
       <textarea id="review" name="review" rows="5"></textarea>
     </fieldset>
 
+    <!-- User Name (text, id, name, optional, label) -->
     <fieldset>
-      <legend for="username">Your Name <em>(Optional)</em></legend>
-      <input type="text" id="username" name="username" />
+      <label for="username" class="bold-label">Your Name <em>(Optional)</em></label>
+      <input type="text" id="username" name="username">
     </fieldset>
 
-    <button type="submit">Post Review</button>
+    <!-- Form Submission Button (input type submit, descriptive value) -->
+    <input type="submit" value="Post Review">
   </form>
 
   <footer>
@@ -65,5 +72,5 @@
     <p>Nigeria</p>
     <p id="lastModified"></p>
   </footer>
-
-  
+</body>
+</html>

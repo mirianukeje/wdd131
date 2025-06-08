@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     lastMod.textContent = `Last Modified: ${document.lastModified}`;
   }
 
-  // Products array
+  // Products array (provided or modify as needed)
   const products = [
     {
       id: "fc-1888",
@@ -40,53 +40,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   ];
 
-  const productSelect = document.querySelector('select[name="product"]');
+  // Populate product select (value = product name)
+  const productSelect = document.getElementById("product");
   if (productSelect) {
-    const defaultOption = document.createElement("option");
-    defaultOption.value = "";
-    defaultOption.textContent = "Select a product";
-    defaultOption.disabled = true;
-    defaultOption.selected = true;
-    productSelect.appendChild(defaultOption);
+    // Remove all but the first option (the instructional placeholder)
+    while (productSelect.options.length > 1) {
+      productSelect.remove(1);
+    }
 
     products.forEach(product => {
       const option = document.createElement("option");
-      option.value = product.id;
+      option.value = product.name; // Value is product name, not id!
       option.textContent = `${product.name} (Avg Rating: ${product.averagerating})`;
       productSelect.appendChild(option);
     });
   }
-
-  // Form validation on submit
-  const form = document.querySelector("form");
-  form.addEventListener("submit", function (event) {
-    const featureCheckboxes = form.querySelectorAll('input[name="features"]:checked');
-    const ratingSelected = form.querySelector('input[name="rating"]:checked');
-    const productSelected = form.querySelector('select[name="product"]').value;
-
-    if (!productSelected) {
-      alert("Please choose a product.");
-      event.preventDefault();
-      return;
-    }
-
-    if (!ratingSelected) {
-      alert("Please give a rating.");
-      event.preventDefault();
-      return;
-    }
-
-    if (featureCheckboxes.length === 0) {
-      alert("Please select at least one feature you found useful.");
-      event.preventDefault();
-      return;
-    }
-
-    // Optional: confirmation
-    const confirmSubmit = confirm("Are you sure you want to post this review?");
-    if (!confirmSubmit) {
-      event.preventDefault();
-    }
-  });
 });
-
