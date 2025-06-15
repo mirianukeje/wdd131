@@ -1,0 +1,173 @@
+@media screen and (min-width: 600px) {
+
+    /* Header */
+    header {
+        /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem; */
+        grid-template-columns: 1fr auto;
+        gap: 1rem;
+        justify-content: flex-end;
+    }
+
+
+    /* h1 {
+        font-size: 2rem;
+    }
+
+    .logo {
+        text-align: left;
+        margin-left: 1rem;
+    } */
+
+    header img {
+        max-height: 90px;
+        margin: 0; 
+        /* display: block; */
+        /* margin: 0 auto;
+        display: block; */
+    }
+
+    .navigation {
+        display: flex;
+    }
+
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .hero-trips img {
+        height: 90vh;
+    }
+
+    .hero-content {
+        max-width: 800px;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+        /* About Us Section */
+    .about-section {
+        padding: 3rem 2rem;
+        font-size: medium;
+    }
+
+    .about-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-section p {
+        font-size: 1rem;
+    }
+
+    .about-section ul li {
+        font-size: 1rem;
+    }
+
+    /* TEAM GALLERY - LARGER */
+    .team-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .team-member p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    /* ===== GALLERY SECTION ===== */
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    /* Why Us Section */
+
+    .why-us {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-top: 2rem;
+        padding: 0 1rem;
+    }
+    /* 
+        .why-us {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 2rem;
+        padding: 0 1rem;
+    } */
+
+    .why-us div {
+        background-color: var(--text-color);
+        border: 1px solid #eee;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        padding: 1rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .why-us-item img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 1rem;
+    }
+
+    .why-us-item p {
+        text-align: center;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    /* Services */
+
+    .service-section {
+        padding: 3rem 2rem;
+        font-size: medium;
+    }
+
+    .service-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .service-section p {
+        font-size: 1rem;
+    }
+
+
+    .service-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .service-section p {
+        font-size: 1rem;
+    }
+
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+
+    
+        
+}
