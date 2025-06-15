@@ -430,7 +430,7 @@ nav {
 
 footer {
     background: var(--secondary-color);
-    font-size:  x-small;
+    font-size:  small;
     font-weight: bold;
     color: var(--accent-color);
     padding: 0.26rem;
